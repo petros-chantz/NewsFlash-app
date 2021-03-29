@@ -1,34 +1,33 @@
-import React from "react";
-import { BodyWrapper, NewsList, NewsItem } from "./BodyStyles";
+import React, { useEffect, useState } from "react";
+import useFetch from "../../api/useFetch";
+import styled from "styled-components";
+import Menu from "../Menu/Menu";
+import Showcase from "../Showcase/Showcase";
+import topicNames from "../../db.json" 
 
+const BodyWrapper = styled.div`
+    height: 85vh;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    background-color: #EBF2FA;
+`;
 export default function Body() {
-  return (
-      <BodyWrapper>
-          {/* <p className="Body-start-text">choose a topic to look for </p> */}
-          <NewsList>
-            <NewsItem>
-                  <div className="section-topic">
-                      <div className="topic">
-                          <h3>topic</h3>
-                      </div>
-                      <div className="date">
-                          <h3>publish on 29th of March 2021</h3>
-                      </div>
-                  </div>
-
-                  <div className="section-description">
-                      <h2 className="title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, animi iste.
-                      Repellendus, consequuntur doloribus similique cum minima praesentium, nam dolore ipsam quam alias
-                       quidem nobis nulla, maxime earum modi ad.</h2>
-                  </div>
-
-                  <div className="section-author">
-                      <h3 className="author">author</h3>
-                  </div>
-            </NewsItem>
-          </NewsList>
-    </BodyWrapper>
-  );
+    const { get, loading } = useFetch("https://react-tutorial-demo.firebaseio.com/");
+    const [topic, setTopic] = useState("");
+   
+    return (
+        <BodyWrapper>
+            <Menu topicNames={topicNames} topic={topic}/>
+            <Showcase topic={topic}/>
+        </BodyWrapper>
+    );
 }
 
+{/* <h2>{loading ? "Loading..." : ""}</h2> */}
 
+    // useEffect(() => {
+    //     get("users.json").then(data => {
+    //         console.log(data);
+    //     })
+    //     .catch(error => console.error(error));
+    // }, []);

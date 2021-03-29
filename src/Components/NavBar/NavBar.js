@@ -1,22 +1,26 @@
 import React from "react";
-import { NavBarWrapper } from "./NavBarStyles";
+import styled from "styled-components";
 
+const NavBarWrapper = styled.div`
+    height: 15vh;
+    background-color: #EBF2FA;
+    border-bottom: 3px solid #242423;
+    display: grid;
+    place-items: end start;
+
+    .navBar-title{
+        padding-left: 50px;
+        .title{
+            font-size: 60px;
+            color: #242423;
+        }
+    }
+`;
 export default function NavBar() {
     return (
         <NavBarWrapper>
-            <div className="NavBar-title">
-                <h2 className="title">NewsFlash</h2>    
-            </div>
-            <div className="NavBar-subTitle">
-                <h2 className="subTitle">Read the latest stories from the New York Times</h2>
-            </div>
-            <div className="NavBar-btns">
-                <button className="btn">world</button>
-                <button className="btn">us</button>
-                <button className="btn">Top</button>
-                <button className="btn">Top</button>
-                <button className="btn">Top</button>
-                <button className="btn">Top</button>
+            <div className="navBar-title">
+                <h2 className="title">NewsFlash</h2>
             </div>
         </NavBarWrapper>
     );

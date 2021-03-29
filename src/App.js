@@ -1,6 +1,6 @@
 import './App.css';
+import Body from './Components/Body/Body';
 import NavBar from './Components/NavBar/NavBar';
-import Body from "./Components/Body/Body";
 
 function App() {
   return (<>

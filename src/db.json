@@ -1,0 +1,52 @@
+{
+    "1":{
+        "id": 1,
+        "topic": "world",
+        "icon": "./assets/1F310_black.png"
+    },
+    "2":{
+        "id": 2,
+        "topic": "us",
+        "icon": "./assets/1F1FA-1F1F8_color.png"
+    },
+        "3":{
+        "id": 3,
+        "topic": "travel",
+        "icon": "./assets/1F9ED_black.png"
+    },
+        "4":{
+        "id": 4,
+        "topic": "business",
+        "icon": "./assets/1F91D_black.png"
+    },
+        "5":{
+        "id": 5,
+        "topic": "health",
+        "icon": "./assets/1F489_black.png"
+    },
+        "6":{
+        "id": 6,
+        "topic": "politics",
+        "icon": "./assets/1F3DB_black.png"
+    },
+        "7":{
+        "id": 7,
+        "topic": "science",
+        "icon": "./assets/1F52C_black.png"
+    },
+        "8":{
+        "id": 8,
+        "topic": "sports",
+        "icon": "./assets/1F3C9_black.png"
+    },
+        "9":{
+        "id": 9,
+        "topic": "movies",
+        "icon": "./assets/1F4FD_black.png"
+    },
+        "10":{
+        "id": 10,
+        "topic": "food",
+        "icon": "./assets/1F37D_black.png"
+    }
+}
